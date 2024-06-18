@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes blinking {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.blinking {
+  animation: blinking 2s infinite;
+}
+
+#progress-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ddd;
+  padding: 2px;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 10px;
+  background-color: #4caf50;
+}
+
+#header-panel {
+  background-color: #a1e8af;
+  height: 20px;
+  width: 100%;
+}

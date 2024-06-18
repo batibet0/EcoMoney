@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agua - EcoMoney</title>
+<link rel="stylesheet" type="text/css" href="agua.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div id="header-panel">
+    <img src="logo.png" alt="Logo EcoMoney" width="30">
+    <span>EcoMoney</span>
+  </div>
+
+  <div id="agua-content" class="container text-center">
+    <h1>Métodos para Ahorrar Agua</h1>
+    <div class="methods">
+      <button class="method-button" onclick="toggleMethod(1)">Reparar Fugas</button>
+      <div id="method-1" class="method-text">
+        <p>Repara todas las fugas de agua. Las fugas pueden desperdiciar cientos de litros de agua al año.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(2)">Usar Aireadores</button>
+      <div id="method-2" class="method-text">
+        <p>Usa aireadores en los grifos. Estos dispositivos reducen el flujo de agua y aumentan la eficiencia.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(3)">Recolectar Agua de Lluvia</button>
+      <div id="method-3" class="method-text">
+        <p>Recoge el agua de lluvia para regar las plantas. Es una forma gratuita y sostenible de mantener tu jardín verde.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(4)">Cargas Completas</button>
+      <div id="method-4" class="method-text">
+        <p>Utiliza la lavadora y el lavavajillas solo con cargas completas para maximizar el uso del agua.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(5)">Inodoros de Bajo Consumo</button>
+      <div id="method-5" class="method-text">
+        <p>Instala inodoros de bajo consumo. Estos inodoros utilizan menos agua por descarga.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(6)">Duchas Cortas</button>
+      <div id="method-6" class="method-text">
+        <p>Dúchate en lugar de bañarte y reduce el tiempo de la ducha para ahorrar agua.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(7)">Riego Eficiente</button>
+      <div id="method-7" class="method-text">
+        <p>Riega las plantas temprano en la mañana o tarde en la noche para minimizar la evaporación.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(8)">Reducción en el Tanque del Inodoro</button>
+      <div id="method-8" class="method-text">
+        <p>Coloca una botella llena de arena o una pesa en el tanque del inodoro para reducir la cantidad de agua usada en cada descarga.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(9)">Lavar el Coche con Balde</button>
+      <div id="method-9" class="method-text">
+        <p>Usa un balde para lavar el coche en lugar de una manguera. Esto puede ahorrar cientos de litros de agua.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(10)">Cabezal de Ducha de Bajo Flujo</button>
+      <div id="method-10" class="method-text">
+        <p>Instala cabezales de ducha de bajo flujo para reducir el consumo de agua sin perder presión.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(11)">Limpieza sin Manguera</button>
+      <div id="method-11" class="method-text">
+        <p>Usa una escoba en lugar de una manguera para limpiar patios y aceras.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(12)">Recoger Agua Fría</button>
+      <div id="method-12" class="method-text">
+        <p>Recoge el agua fría mientras esperas que se caliente y úsala para regar plantas o lavar.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(13)">Descongelar sin Agua</button>
+      <div id="method-13" class="method-text">
+        <p>Evita descongelar alimentos bajo el grifo. Usa el refrigerador o el microondas para descongelar.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(14)">Plantas Nativas</button>
+      <div id="method-14" class="method-text">
+        <p>Usa plantas nativas y resistentes a la sequía en tu jardín para reducir la necesidad de riego.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(15)">Ajuste de Aspersores</button>
+      <div id="method-15" class="method-text">
+        <p>Revisa y ajusta los aspersores para que no rieguen la acera o el pavimento.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(16)">Manguera con Boquilla</button>
+      <div id="method-16" class="method-text">
+        <p>Usa una manguera con boquilla de cierre automático para controlar el flujo de agua al lava
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          <script>
+            function toggleMethod(num) {
+              const element = document.getElementById(`method-${num}`);
+              element.style.display = element.style.display === 'none' ? 'block' : 'none';
+            }
+          </script>
+        </body>
+        </html>
+        

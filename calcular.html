@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcular Ahorro - EcoMoney</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  #header-panel {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn {
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+  <div id="header-panel">
+    <img src="logo.png" alt="Logo EcoMoney" width="30">
+    <span>EcoMoney</span>
+  </div>
+
+  <div class="container mt-4">
+    <h1>Calcular Ahorro</h1>
+    
+    <div class="form-group">
+      <label for="txtPagoAnterior">Pago Anterior:</label>
+      <input type="text" id="txtPagoAnterior" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="txtPagoReciente">Pago Reciente:</label>
+      <input type="text" id="txtPagoReciente" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="selRecurso">Recurso:</label>
+      <select id="selRecurso" class="form-control">
+        <option value="agua">Agua</option>
+        <option value="luz">Luz</option>
+        <option value="comida">Comida</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="selPeriodo">Periodo:</label>
+      <select id="selPeriodo" class="form-control">
+        <option value="semana">Semana</option>
+        <option value="mes">Mes</option>
+        <option value="mas-de-1-mes">Más de 1 Mes</option>
+      </select>
+    </div>
+
+    <button id="btnMostrarMetodos" class="btn btn-primary mt-3" style="background-color: #4CAF50; border-color: #4CAF50;">Mostrar Métodos de Ahorro</button>
+
+    <div id="metodos-container" class="mt-3">
+      <!-- Los métodos se cargarán dinámicamente con JavaScript -->
+    </div>
+    
+    <button id="btnCalcular" class="btn btn-warning mt-3" style="background-color: #FFD700; border-color: #FFD700;" data-toggle="modal" data-target="#resultadoModal">Calcular Ahorro</button>
+  </div>
+
+  <div class="modal fade" id="resultadoModal" tabindex="-1" role="dialog" aria-labelledby="resultadoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="resultadoModalLabel">¡Felicidades!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="imagenResultado" src="" alt="Resultado" style="max-width: 100%; height: auto;">
+          <p>Tu ahorro es de: <span id="ahorroCalculado"></span></p>
+          <p id="mensajeGasto" style="font-weight: bold;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="calcular.js"></script>
+
+  <script>
+    document.getElementById('btnCalcular').addEventListener('click', function() {
+      var pagoAnterior = parseFloat(document.getElementById('txtPagoAnterior').value);
+      var pagoReciente = parseFloat(document.getElementById('txtPagoReciente').value);
+      var ahorro = pagoAnterior - pagoReciente;
+      document.getElementById('ahorroCalculado').textContent = ahorro.toFixed(2);
+      var mensajeGasto = document.getElementById('mensajeGasto');
+      var imagenResultado = document.getElementById('imagenResultado');
+      if (pagoAnterior > pagoReciente) {
+        mensajeGasto.textContent = "¡Buen trabajo, has disminuido tu gasto!";
+        imagenResultado.src = "cerdo1.jfif";
+      } else if (pagoAnterior < pagoReciente) {
+        mensajeGasto.textContent = "¡Has aumentado tu gasto, no hubo ahorro!";
+        imagenResultado.src = "cerdo2.jfif";
+      } else {
+        mensajeGasto.textContent = "";
+        imagenResultado.src = "";
+      }
+      $('#resultadoModal').modal('show');
+    });
+  </script>
+</body>
+</html>

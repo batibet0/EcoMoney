@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  #header-panel {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  #header-panel img {
+    margin-right: 10px;
+  }
+  
+  #ahorro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+  }
+  
+  .resource-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .resource-button {
+    background-color: white;
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .resource-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .button-icon {
+    width: 24px;
+    height: 24px;
+  }
+  

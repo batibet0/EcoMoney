@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comida - EcoMoney</title>
+<link rel="stylesheet" type="text/css" href="comida.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  
+  <div id="header-panel">
+    <img src="logo.png" alt="Logo EcoMoney" width="30">
+    <span>EcoMoney</span>
+  </div>
+
+  
+  <div id="comida-content" class="container text-center">
+    <h1>Métodos para Evitar el Desperdicio de Alimentos</h1>
+    <div class="methods">
+      <button class="method-button" onclick="toggleMethod(1)">Planificación de Comidas</button>
+      <div id="method-1" class="method-text">
+        <p>Planifica tus comidas semanales y haz una lista de compras para comprar solo lo necesario.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(2)">Almacenamiento Adecuado</button>
+      <div id="method-2" class="method-text">
+        <p>Almacena los alimentos adecuadamente para prolongar su vida útil, como en recipientes herméticos o en el refrigerador.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(3)">Fecha de Caducidad</button>
+      <div id="method-3" class="method-text">
+        <p>Conoce y respeta las fechas de caducidad de los alimentos para consumirlos antes de que se echen a perder.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(4)">Reutilización de Sobras</button>
+      <div id="method-4" class="method-text">
+        <p>Reutiliza las sobras para preparar nuevas comidas o congélalas para consumirlas más tarde.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(5)">Porciones Moderadas</button>
+      <div id="method-5" class="method-text">
+        <p>Sirve porciones moderadas y guarda las sobras adecuadamente para evitar desperdiciar comida.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(6)">Comprar Localmente</button>
+      <div id="method-6" class="method-text">
+        <p>Compra alimentos locales y frescos en la cantidad necesaria para reducir el riesgo de desperdicio.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(7)">Compostaje</button>
+      <div id="method-7" class="method-text">
+        <p>Si tienes restos de comida no consumible, considera compostar para reducir la cantidad de residuos.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(8)">Educación y Conciencia</button>
+      <div id="method-8" class="method-text">
+        <p>Educa a tu familia sobre la importancia de reducir el desperdicio de alimentos y cómo hacerlo.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(9)">Uso de Condiciones Óptimas</button>
+      <div id="method-9" class="method-text">
+        <p>Utiliza condiciones óptimas de almacenamiento para cada tipo de alimento para prolongar su frescura y calidad.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(10)">Revisión Regular de Alimentos</button>
+      <div id="method-10" class="method-text">
+        <p>Revisa regularmente tu despensa y refrigerador para consumir primero los alimentos que están por caducar.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(11)">Donación de Alimentos</button>
+      <div id="method-11" class="method-text">
+        <p>Considera donar alimentos no utilizados pero aún comestibles a bancos de alimentos o personas necesitadas.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(12)">Compra Responsable</button>
+      <div id="method-12" class="method-text">
+        <p>Compra solo lo necesario y evita las compras impulsivas para reducir el riesgo de desperdicio de alimentos.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(13)">Conservación por Congelación</button>
+      <div id="method-13" class="method-text">
+        <p>Conserva alimentos frescos mediante la congelación en porciones adecuadas para su uso posterior.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(14)">Aprovechamiento Total</button>
+      <div id="method-14" class="method-text">
+        <p>Aprovecha al máximo los alimentos, incluidas las partes no convencionales como cáscaras y tallos.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(15)">Compra a Granel</button>
+      <div id="method-15" class="method-text">
+        <p>Compra alimentos a granel solo si puedes consumirlos antes de que se deterioren.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(16)">Educación sobre Fechas</button>
+      <div id="method-16" class="method-text">
+        <p>Enseña a interpretar las fechas de los alimentos para evitar desechar alimentos aún seguros para el consumo.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(17)">Recetas de Aprovechamiento</button>
+      <div id="method-17" class="method-text">
+        <p>Busca y utiliza recetas que aprovechen al máximo los ingredientes disponibles.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(18)">Reducción de Desperdicios</button>
+      <div id="method-18" class="method-text">
+        <p>Adopta medidas prácticas para reducir los desperdicios durante la preparación y el consumo de alimentos.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(19)">Rotación de Alimentos</button>
+      <div id="method-19" class="method-text">
+        <p>Practica la rotación de alimentos en tu despensa y refrigerador para usar primero los alimentos más antiguos.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(20)">Comunicación Familiar</button>
+      <div id="method-20" class="method-text">
+        <p>Comunica a tu familia la importancia de reducir el desperdicio de alimentos y trabaja juntos para lograrlo.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function toggleMethod(num) {
+      const element = document.getElementById(`method-${num}`);
+      if (element.style.display === 'none' || element.style.display === '') {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luz - EcoMoney</title>
+<link rel="stylesheet" type="text/css" href="luz.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div id="header-panel">
+    <img src="logo.png" alt="Logo EcoMoney" width="30">
+    <span>EcoMoney</span>
+  </div>
+
+  <div id="luz-content" class="container text-center">
+    <h1>Métodos para Ahorrar Electricidad</h1>
+    <div class="methods">
+      <button class="method-button" onclick="toggleMethod(1)">Apagar Luces</button>
+      <div id="method-1" class="method-text">
+        <p>Apaga las luces cuando no las necesites o cuando salgas de una habitación.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(2)">Usar Bombillas LED</button>
+      <div id="method-2" class="method-text">
+        <p>Cambia a bombillas LED, que consumen menos electricidad y duran más que las incandescentes.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(3)">Desconectar Aparatos</button>
+      <div id="method-3" class="method-text">
+        <p>Desconecta los aparatos eléctricos cuando no los uses para evitar el consumo en modo de espera.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(4)">Usar Luz Natural</button>
+      <div id="method-4" class="method-text">
+        <p>Aprovecha la luz natural durante el día en lugar de encender las luces.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(5)">Electrodomésticos Eficientes</button>
+      <div id="method-5" class="method-text">
+        <p>Compra electrodomésticos con alta eficiencia energética para reducir el consumo de electricidad.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(6)">Termostato Programable</button>
+      <div id="method-6" class="method-text">
+        <p>Utiliza un termostato programable para ajustar la calefacción y la refrigeración según tus necesidades diarias.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(7)">Aislación de Ventanas</button>
+      <div id="method-7" class="method-text">
+        <p>Aísla las ventanas para mantener la temperatura interna y reducir el uso de calefacción y aire acondicionado.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(8)">Usar Ventiladores</button>
+      <div id="method-8" class="method-text">
+        <p>Usa ventiladores en lugar de aire acondicionado para refrescar tu hogar.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(9)">Lavar con Agua Fría</button>
+      <div id="method-9" class="method-text">
+        <p>Utiliza agua fría para lavar la ropa, ya que calentar el agua consume mucha electricidad.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(10)">Secar al Aire Libre</button>
+      <div id="method-10" class="method-text">
+        <p>Seca la ropa al aire libre en lugar de usar la secadora para ahorrar electricidad.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(11)">Cocinar con Microondas</button>
+      <div id="method-11" class="method-text">
+        <p>Usa el microondas en lugar del horno eléctrico para calentar alimentos, ya que consume menos electricidad.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(12)">Ajuste de Termostato</button>
+      <div id="method-12" class="method-text">
+        <p>Ajusta el termostato a una temperatura moderada para evitar el uso excesivo de calefacción o refrigeración.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(13)">Uso Eficiente del Calentador</button>
+      <div id="method-13" class="method-text">
+        <p>Reduce el uso del calentador de agua ajustando el termostato a una temperatura más baja.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(14)">Iluminación de Bajo Consumo</button>
+      <div id="method-14" class="method-text">
+        <p>Usa lámparas fluorescentes compactas (CFL) o LED para iluminar tu hogar de manera más eficiente.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(15)">Revisión de Electrodomésticos</button>
+      <div id="method-15" class="method-text">
+        <p>Revisa y mantén los electrodomésticos regularmente para asegurarte de que funcionen de manera eficiente.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(16)">Uso de Temporizadores</button>
+      <div id="method-16" class="method-text">
+        <p>Utiliza temporizadores para encender y apagar electrodomésticos automáticamente.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(17)">Paneles Solares</button>
+      <div id="method-17" class="method-text">
+        <p>Instala paneles solares para generar tu propia electricidad y reducir la dependencia de la red eléctrica.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(18)">Aislación del Hogar</button>
+      <div id="method-18" class="method-text">
+        <p>Aísla tu hogar para mantener la temperatura interna y reducir el uso de calefacción y refrigeración.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(19)">Uso de Energía Verde</button>
+      <div id="method-19" class="method-text">
+        <p>Contrata servicios de energía verde que utilicen fuentes renovables para abastecer tu hogar.</p>
+      </div>
+
+      <button class="method-button" onclick="toggleMethod(20)">Educación sobre Ahorro Energético</button>
+      <div id="method-20" class="method-text">
+        <p>Educate y educa a tu familia sobre la importancia del ahorro energético y cómo pueden contribuir.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function toggleMethod(num) {
+      const element = document.getElementById(`method-${num}`);
+      element.style.display = element.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
